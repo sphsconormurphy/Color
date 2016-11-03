@@ -40,7 +40,21 @@ Color.blueIntensity = function(rgb){
 };
 
 //brightness
+Color.brightness = function(rgb){
+  let bright = rgb[0]+rgb[1]+rgb[2];
+  return bright/3;
+}
 
 
 //complement
+Color.complement = function(rgb){
+  var comp = [];
+
+  for(var i = 0, i<rgb.length, r++){
+    var c = 255 - rgb[i];
+    comp.push(c);
+  }
+  return comp;
+}
+
 }
